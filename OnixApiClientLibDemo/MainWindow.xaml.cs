@@ -52,7 +52,7 @@ namespace Its.Onix.Api.Client.Demo
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             var opr = GetOperationObject("GetCompanyProfileInfo");
-            MCompanyProfile data = new MCompanyProfile() { CompanyProfileId = 3 };
+            MCompanyProfile data = new MCompanyProfile() { CompanyProfileId = 10 };
             data = opr.Apply(data);
 
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
@@ -105,9 +105,10 @@ namespace Its.Onix.Api.Client.Demo
             MCompanyProfile data = new MCompanyProfile()
             {
                 CompanyProfileId = null,
-                Code = "WTT003",
+                Code = "WTT004",
                 CompanyNameThai = "บริษัท 1234 test [" + txtDummy.Text + "]",
                 CompanyNameEng = "1234 Company XXXX",
+                CompanyPrefix = new MMaster() { MasterId = 11 }
             };
 
             data = opr.Apply(data);
