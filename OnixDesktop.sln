@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixApiClientLibDemo", "OnixDesktopClient\OnixApiClientLibDemo.csproj", "{4BFF6E3D-7ADF-488F-8BC5-11625204D07E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixApiClientLibDemo", "OnixApiClientLibDemo\OnixApiClientLibDemo.csproj", "{4BFF6E3D-7ADF-488F-8BC5-11625204D07E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixApiClientLib", "OnixApiClientLib\OnixApiClientLib.csproj", "{D1AE4AFA-4678-400F-9309-233028F27365}"
 EndProject
