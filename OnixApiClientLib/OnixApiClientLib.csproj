@@ -54,12 +54,14 @@
     <Compile Include="Models\MCompanyProfile.cs" />
     <Compile Include="Models\MMaster.cs" />
     <Compile Include="Commons\IOperation.cs" />
+    <Compile Include="Operations\CompanyProfiles\SaveCompanyProfile.cs" />
     <Compile Include="Operations\CompanyProfiles\DeleteCompanyProfile.cs" />
     <Compile Include="Operations\CompanyProfiles\GetCompanyProfileList.cs" />
     <Compile Include="Operations\CompanyProfiles\GetCompanyProfileInfo.cs" />
     <Compile Include="Operations\Masters\DeleteMaster.cs" />
     <Compile Include="Operations\Masters\GetMasterInfo.cs" />
     <Compile Include="Operations\Masters\GetMasterList.cs" />
+    <Compile Include="Operations\Masters\SaveMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

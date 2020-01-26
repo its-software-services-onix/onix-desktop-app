@@ -7,15 +7,24 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         Title="MainWindow" Height="450" Width="1000">
+    
     <DockPanel LastChildFill="True">
         <DockPanel DockPanel.Dock="Top" Height="70" Background="AliceBlue">
             <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="GetMasterList" Click="Button_Click"/>
             <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="GetMasterInfo" Click="Button_Click_2"/>
-            <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="DeleteMaster" Click="Button_Click_4"/>
+            <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="SaveMaster" Click="Button_Click_6"/>
+            
+            <Button Visibility="Collapsed" Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="DeleteMaster" Click="Button_Click_4"/>
             
             <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="GetCompanyProfileList" Click="Button_Click_1"/>
             <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="GetCompanyProfileInfo" Click="Button_Click_3"/>
-            <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="DeleteCompanyProfile" Click="Button_Click_5"/>
+            <Button Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="SaveCompanyProfile" Click="Button_Click_7"/>
+
+            <Button Visibility="Collapsed" Width="150" Height="50" HorizontalAlignment="Left" Margin="5" Content="DeleteCompanyProfile" Click="Button_Click_5"/>
+        </DockPanel>
+
+        <DockPanel DockPanel.Dock="Top" Height="50">
+            <TextBox Name="txtDummy" Width="200" HorizontalAlignment="Left" Margin="5" VerticalContentAlignment="Center"/>
         </DockPanel>
 
         <Grid>

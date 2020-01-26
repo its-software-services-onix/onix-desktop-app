@@ -15,10 +15,12 @@ namespace Its.Onix.Api.Client.Factories
             AddClassConfig("GetCompanyProfileList", "Its.Onix.Api.Client.Operations.CompanyProfiles.GetCompanyProfileList");
             AddClassConfig("GetCompanyProfileInfo", "Its.Onix.Api.Client.Operations.CompanyProfiles.GetCompanyProfileInfo");
             AddClassConfig("DeleteCompanyProfile", "Its.Onix.Api.Client.Operations.CompanyProfiles.DeleteCompanyProfile");
+            AddClassConfig("SaveCompanyProfile", "Its.Onix.Api.Client.Operations.CompanyProfiles.SaveCompanyProfile");
 
             AddClassConfig("GetMasterList", "Its.Onix.Api.Client.Operations.Masters.GetMasterList");
             AddClassConfig("GetMasterInfo", "Its.Onix.Api.Client.Operations.Masters.GetMasterInfo");
             AddClassConfig("DeleteMaster", "Its.Onix.Api.Client.Operations.Masters.DeleteMaster");
+            AddClassConfig("SaveMaster", "Its.Onix.Api.Client.Operations.Masters.SaveMaster");
         }
 
         private static void AddClassConfig(string apiName, string fqdn)

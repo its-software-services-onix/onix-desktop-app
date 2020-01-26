@@ -20,12 +20,7 @@ namespace Its.Onix.Api.Client.Commons
             return "";
         }
 
-        protected virtual string GetHttpMethod()
-        {
-            return "GET";
-        }
-
-        protected T SubmitOperation<T>(string method, string restPath)
+        protected T SubmitOperationWithNoContent<T>(string method, string restPath)
         {
             string url = string.Format("{0}{1}", BaseUrl, restPath);
 
@@ -39,17 +34,16 @@ namespace Its.Onix.Api.Client.Commons
             return qrp;
         }
 
-        protected QueryResponseParam<T> SubmitPostOperation<T>(string restPath, QueryRequestParam param)
+        private string SubmitData(string method, string restPath, object dat)
         {
-            string payload = JsonConvert.SerializeObject(param);
+            string payload = JsonConvert.SerializeObject(dat);
             string url = string.Format("{0}{1}", BaseUrl, restPath);
 
             string postData = string.Format("JsonContent={0}", payload);
-            byte[] data = Encoding.ASCII.GetBytes(postData);
-
+            byte[] data = Encoding.UTF8.GetBytes(postData);
 
             var httpReq = WebRequest.Create(url);
-            httpReq.Method = "POST";
+            httpReq.Method = method;
             httpReq.ContentType = "application/x-www-form-urlencoded";
             httpReq.ContentLength = data.Length;
 
@@ -60,39 +54,65 @@ namespace Its.Onix.Api.Client.Commons
             var response = httpReq.GetResponse();
             string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
-            var qrp = JsonConvert.DeserializeObject<QueryResponseParam<T>>(responseString);
+            return responseString;
+        }
 
+        protected QueryResponseParam<T> SubmitPostOperationForQuery<T>(string restPath, QueryRequestParam param)
+        {
+            string responseString = SubmitData("POST", restPath, param);
+            var qrp = JsonConvert.DeserializeObject<QueryResponseParam<T>>(responseString);
             return qrp;
+        }
+
+        protected T SubmitOperationWithContent<T>(string method, string restPath, T dat)
+        {
+            string responseString = SubmitData(method, restPath, dat);
+            var resp = JsonConvert.DeserializeObject<T>(responseString);
+            return resp;
         }
 
         public QueryResponseParam<T> Apply<T>(QueryRequestParam param)
         {
             string path = GetRestPath();
-            var qrp = SubmitPostOperation<T>(path, param);
+            var qrp = SubmitPostOperationForQuery<T>(path, param);
             return qrp;
         }
 
         public T Apply<T>(T data) where T:BaseModel
         {
             string path = GetRestPath<T>(data);
-            string method = GetHttpMethod();
+            string method = "GET";
 
-            T qrp = default(T);
+            T res = default(T);
 
             if (path.Contains("Delete"))
             {
                 method = "DELETE";
+                res = SubmitOperationWithNoContent<T>(method, path);
             }
-
-            try
+            else if (path.Contains("Save"))
             {
-                qrp = SubmitOperation<T>(method, path);
+                string[] parts = path.Split('/');
+                int size = parts.Length;
+
+                if (size == 2)
+                {
+                    method = "POST";
+                }
+                else
+                {
+                    method = "PUT";
+                }
+
+                res = SubmitOperationWithContent(method, path, data);
             }
-            catch
-            { 
+            else
+            {
+                //GET - GetInfo() function
+                res = SubmitOperationWithNoContent<T>(method, path);
             }
 
-            return qrp;
+            return res;
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Its.Onix.Api.Client.Demo
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             var opr = GetOperationObject("GetMasterInfo");
-            MMaster data = new MMaster() { MasterId = 129 };
+            MMaster data = new MMaster() { MasterId = 8 };
             data = opr.Apply(data);
 
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
@@ -73,6 +73,43 @@ namespace Its.Onix.Api.Client.Demo
         {
             var opr = GetOperationObject("DeleteCompanyProfile");
             MCompanyProfile data = new MCompanyProfile() { CompanyProfileId = 1 };
+            data = opr.Apply(data);
+
+            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            txtOutput.Text = json;
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            var opr = GetOperationObject("SaveMaster");
+            MMaster data = new MMaster() 
+            { 
+                MasterId = 8, 
+                Code = "---NewCode33--", 
+                Name = "NewName",
+                ShortDescription = "NewShortDescription",
+                Type = 1,
+                Key = "This is new key",
+                Tag = "ทดสอบแท็ก"
+            };
+
+            data = opr.Apply(data);
+
+            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            txtOutput.Text = json;
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            var opr = GetOperationObject("SaveCompanyProfile");
+            MCompanyProfile data = new MCompanyProfile()
+            {
+                CompanyProfileId = null,
+                Code = "WTT003",
+                CompanyNameThai = "บริษัท 1234 test [" + txtDummy.Text + "]",
+                CompanyNameEng = "1234 Company XXXX",
+            };
+
             data = opr.Apply(data);
 
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
