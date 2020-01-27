@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixApiClientLibDemo", "Oni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixApiClientLib", "OnixApiClientLib\OnixApiClientLib.csproj", "{D1AE4AFA-4678-400F-9309-233028F27365}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnixClientDesktop", "OnixClientDesktop\OnixClientDesktop.csproj", "{595E2C1A-728F-4262-94A2-273956ED4855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D1AE4AFA-4678-400F-9309-233028F27365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1AE4AFA-4678-400F-9309-233028F27365}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1AE4AFA-4678-400F-9309-233028F27365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595E2C1A-728F-4262-94A2-273956ED4855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595E2C1A-728F-4262-94A2-273956ED4855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595E2C1A-728F-4262-94A2-273956ED4855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595E2C1A-728F-4262-94A2-273956ED4855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

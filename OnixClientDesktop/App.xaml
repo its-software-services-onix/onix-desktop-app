@@ -1,0 +1,32 @@
+﻿<Application x:Class="OnixClientDesktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:OnixClientDesktop"
+             StartupUri="WinMain.xaml">
+
+    <Application.Resources>
+        <Style x:Key="StatusLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Background" Value="Gray" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Blue" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="TopLevelMainMenu" TargetType="Menu">
+            <Setter Property="Background" Value="Gray" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style x:Key="TopLevelMenuItem" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Background" Value="Gray" />
+        </Style>
+    </Application.Resources>
+</Application>

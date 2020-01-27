@@ -1,0 +1,47 @@
+﻿<Window x:Class="Its.Onix.Ui.Client.WinMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:main_menu="clr-namespace:Its.Onix.Ui.Client.Skeleton.MainMenu"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <DockPanel LastChildFill="True">
+        <Menu x:Name="mnuMain" DockPanel.Dock="Top" 
+              ItemsSource="{Binding MenuCategories}"
+              Style="{StaticResource ResourceKey=TopLevelMainMenu}">
+
+            <Menu.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=ChildItems}">
+                    <Label Content="{Binding Caption}" Foreground="White" FontWeight="Bold"></Label>
+                    <HierarchicalDataTemplate.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Caption}" Height="30" VerticalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </HierarchicalDataTemplate.ItemTemplate>
+                </HierarchicalDataTemplate>
+            </Menu.ItemTemplate>
+        </Menu>
+
+        <Grid DockPanel.Dock="Bottom" Height="40" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="USER: ADMIN" Style="{StaticResource ResourceKey=StatusLabel}"/>
+
+            <Label Grid.Column="1" Content="URL: https://onix-web-api-dev-phjesaf3ha-an.a.run.app/" 
+                   Style="{StaticResource ResourceKey=StatusLabel}"/>
+
+            <Label Grid.Column="2" Content="VERSION: 1.0.10" Style="{StaticResource ResourceKey=StatusLabel}"/>
+        </Grid>
+
+        <DockPanel DockPanel.Dock="Top">
+        </DockPanel>
+    </DockPanel>
+</Window>
