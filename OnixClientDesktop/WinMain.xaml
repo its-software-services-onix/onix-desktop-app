@@ -11,7 +11,7 @@
     
     <DockPanel LastChildFill="True">
         <Menu x:Name="mnuMain" DockPanel.Dock="Top" 
-              ItemsSource="{Binding MenuCategories}"
+              ItemsSource="{Binding MainMenu.MenuCategories}"
               Style="{StaticResource ResourceKey=TopLevelMainMenu}">
 
             <Menu.ItemTemplate>

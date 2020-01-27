@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Windows;
-using Its.Onix.Ui.Client.Skeleton.MainMenu;
+using Its.Onix.Ui.Client.Skeleton.Screens;
 
 namespace Its.Onix.Ui.Client
 {
     public partial class WinMain : Window
     {
-        private MainMenuGeneric mainMenu = new MainMenuGeneric();
+        private ScrWinMain screen = new ScrWinMain();
 
         public WinMain()
         {
-            mainMenu.PopulateCategories();
-            DataContext = mainMenu;
-
+            DataContext = screen;
             InitializeComponent();
-
-            //mnuMain.ItemsSource = mainMenu.MenuCategories;
         }
     }
 }
