@@ -22,11 +22,16 @@
             <Setter Property="Foreground" Value="White" />
         </Style>
 
-        <Style x:Key="TopLevelMenuItem" TargetType="MenuItem">
+        <Style x:Key="TopLevelMenuItem" TargetType="Label">
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="Height" Value="30" />
             <Setter Property="Background" Value="Gray" />
+        </Style>
+
+        <Style x:Key="MainMenuItem" TargetType="Label">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
         </Style>
     </Application.Resources>
 </Application>

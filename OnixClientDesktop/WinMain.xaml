@@ -16,10 +16,10 @@
 
             <Menu.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Path=ChildItems}">
-                    <Label Content="{Binding Caption}" Foreground="White" FontWeight="Bold"></Label>
+                    <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=TopLevelMenuItem}"></Label>
                     <HierarchicalDataTemplate.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding Caption}" Height="30" VerticalContentAlignment="Center"/>
+                            <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=MainMenuItem}"/>
                         </DataTemplate>
                     </HierarchicalDataTemplate.ItemTemplate>
                 </HierarchicalDataTemplate>
