@@ -7,6 +7,9 @@ namespace Its.Onix.Ui.Client.Skeleton.Screens
     public class ScrWinMain : ObservableScreen
     {
         private MainMenuGeneric mainMenu = new MainMenuGeneric();
+        private string currentUser;
+        private string url;
+        private string version;
 
         public ScrWinMain()
         {
@@ -24,6 +27,48 @@ namespace Its.Onix.Ui.Client.Skeleton.Screens
             {
                 mainMenu = value;
                 OnPropertyChanged("MainMenu");
+            }
+        }
+
+        public string CurrentUser
+        {
+            get
+            {
+                return currentUser;
+            }
+
+            set
+            {
+                currentUser = value;
+                OnPropertyChanged("CurrentUser");
+            }
+        }
+
+        public string Url
+        {
+            get
+            {
+                return url;
+            }
+
+            set
+            {
+                url = value;
+                OnPropertyChanged("Url");
+            }
+        }
+
+        public string Version
+        {
+            get
+            {
+                return version;
+            }
+
+            set
+            {
+                version = value;
+                OnPropertyChanged("Version");
             }
         }
     }

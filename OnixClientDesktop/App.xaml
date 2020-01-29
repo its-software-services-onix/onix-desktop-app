@@ -16,6 +16,13 @@
             <Setter Property="VerticalContentAlignment" Value="Center" />
         </Style>
 
+        <Style x:Key="FormCaptionLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
         <Style x:Key="TopLevelMainMenu" TargetType="Menu">
             <Setter Property="Background" Value="Gray" />
             <Setter Property="FontWeight" Value="Bold" />

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:main_menu="clr-namespace:Its.Onix.Ui.Client.Skeleton.MainMenu"
+        xmlns:common="clr-namespace:Its.Onix.Ui.Client.Skeleton.Commons"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
@@ -19,7 +20,9 @@
                     <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=TopLevelMenuItem}"></Label>
                     <HierarchicalDataTemplate.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=MainMenuItem}"/>
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=MainMenuItem}"/>
+                            </StackPanel>
                         </DataTemplate>
                     </HierarchicalDataTemplate.ItemTemplate>
                 </HierarchicalDataTemplate>
@@ -28,20 +31,38 @@
 
         <Grid DockPanel.Dock="Bottom" Height="40" Background="Gray">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="80*"/>
-                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" Content="USER: ADMIN" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="0" Content="USER" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="1" Content="{Binding CurrentUser}" Style="{StaticResource ResourceKey=StatusLabel}"/>
 
-            <Label Grid.Column="1" Content="URL: https://onix-web-api-dev-phjesaf3ha-an.a.run.app/" 
-                   Style="{StaticResource ResourceKey=StatusLabel}"/>
-
-            <Label Grid.Column="2" Content="VERSION: 1.0.10" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="2" Content="URL" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="3" Content="{Binding Url}" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            
+            <Label Grid.Column="4" Content="VERSION" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="5" Content="{Binding Version}" Style="{StaticResource ResourceKey=StatusLabel}"/>
         </Grid>
 
-        <DockPanel DockPanel.Dock="Top">
+        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+            <DockPanel.Effect>
+                <DropShadowEffect BlurRadius="10" Direction="0" RenderingBias="Quality" ShadowDepth="1"/>
+            </DockPanel.Effect>
+            
+            <Border x:Name="bdrContainer" Margin="5">
+
+                <common:UFormContainer Caption="LOGIN"
+                                       FormWidth="{Binding ElementName=bdrContainer, Path=Width}" 
+                                       FormHeight="{Binding ElementName=bdrContainer, Path=Height}">
+                        
+                </common:UFormContainer>
+                
+            </Border>
         </DockPanel>
     </DockPanel>
 </Window>
