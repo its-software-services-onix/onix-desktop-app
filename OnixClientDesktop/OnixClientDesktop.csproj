@@ -55,7 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Skeleton\Commons\UFormContainer.xaml">
+    <Page Include="Commons\Forms\UFormContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skeleton\ChangePassword\UChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skeleton\Login\ULogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,15 +75,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Commons\ObservableScreen.cs" />
-    <Compile Include="Commons\ObservableObject.cs" />
-    <Compile Include="Skeleton\Commons\UFormContainer.xaml.cs">
+    <Compile Include="Commons\Forms\FormBase.cs" />
+    <Compile Include="Commons\Forms\IForm.cs" />
+    <Compile Include="Commons\ViewModels\ObservableScreen.cs" />
+    <Compile Include="Commons\ViewModels\ObservableObject.cs" />
+    <Compile Include="Commons\Forms\UFormContainer.xaml.cs">
       <DependentUpon>UFormContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Skeleton\ChangePassword\UChangePassword.xaml.cs">
+      <DependentUpon>UChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Skeleton\Login\FormLogin.cs" />
+    <Compile Include="Skeleton\Login\ULogin.xaml.cs">
+      <DependentUpon>ULogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Skeleton\MainMenu\MainMenuGeneric.cs" />
     <Compile Include="Skeleton\MainMenu\MenuCategoryItem.cs" />
     <Compile Include="Skeleton\MainMenu\MenuCategory.cs" />
-    <Compile Include="Skeleton\Screens\ScrWinMain.cs" />
+    <Compile Include="ScrWinMain.cs" />
     <Compile Include="WinMain.xaml.cs">
       <DependentUpon>WinMain.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -108,7 +125,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Skeleton\Commons\pos_cancel_void.png" />
+    <Resource Include="Commons\Forms\pos_cancel_void.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Images\" />

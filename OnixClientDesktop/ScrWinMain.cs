@@ -1,8 +1,7 @@
-﻿using System.Collections.ObjectModel;
-using Its.Onix.Ui.Client.Commons;
+﻿using Its.Onix.Ui.Client.Commons.ViewModels;
 using Its.Onix.Ui.Client.Skeleton.MainMenu;
 
-namespace Its.Onix.Ui.Client.Skeleton.Screens
+namespace Its.Onix.Ui.Client
 {
     public class ScrWinMain : ObservableScreen
     {

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Its.Onix.Ui.Client.Skeleton.Commons
+namespace Its.Onix.Ui.Client.Commons.Forms
 {
     public partial class UFormContainer : UserControl
     {
@@ -89,8 +89,19 @@ namespace Its.Onix.Ui.Client.Skeleton.Commons
         public UFormContainer()
         {
             DataContext = this;
-
             InitializeComponent();
+        }
+
+        public void AddContent(UserControl content)
+        {
+            if (content != null)
+            {
+                grdMain.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+                grdMain.SetValue(Grid.RowProperty, 0);
+                grdMain.SetValue(Grid.ColumnProperty, 0);
+
+                grdMain.Children.Add(content);
+            }
         }
     }
 }

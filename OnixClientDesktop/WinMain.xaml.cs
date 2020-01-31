@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Windows;
-using Its.Onix.Ui.Client.Skeleton.Screens;
+using Its.Onix.Ui.Client.Skeleton.Login;
 
 namespace Its.Onix.Ui.Client
 {
     public partial class WinMain : Window
     {
-        private ScrWinMain screen = new ScrWinMain();
+        private readonly ScrWinMain screen = new ScrWinMain();
 
         public WinMain()
         {
@@ -17,6 +17,13 @@ namespace Its.Onix.Ui.Client
             DataContext = screen;
 
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var frmLogin = new FormLogin(pnlContent);
+            frmLogin.Show();
+            frmLogin.Caption = "LOGIN";
         }
     }
 }

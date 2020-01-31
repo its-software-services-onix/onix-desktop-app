@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Its.Onix.Ui.Client.Commons
+namespace Its.Onix.Ui.Client.Commons.ViewModels
 {
     public class ObservableObject : INotifyPropertyChanged
     {

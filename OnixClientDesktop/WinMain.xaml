@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:main_menu="clr-namespace:Its.Onix.Ui.Client.Skeleton.MainMenu"
-        xmlns:common="clr-namespace:Its.Onix.Ui.Client.Skeleton.Commons"
+        xmlns:common="clr-namespace:Its.Onix.Ui.Client.Commons.Forms"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     
     <DockPanel LastChildFill="True">
         <Menu x:Name="mnuMain" DockPanel.Dock="Top" 
@@ -49,19 +50,13 @@
             <Label Grid.Column="5" Content="{Binding Version}" Style="{StaticResource ResourceKey=StatusLabel}"/>
         </Grid>
 
-        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+        <DockPanel x:Name="dockMain" DockPanel.Dock="Top" LastChildFill="True">
             <DockPanel.Effect>
                 <DropShadowEffect BlurRadius="10" Direction="0" RenderingBias="Quality" ShadowDepth="1"/>
             </DockPanel.Effect>
-            
-            <Border x:Name="bdrContainer" Margin="5">
 
-                <common:UFormContainer Caption="LOGIN"
-                                       FormWidth="{Binding ElementName=bdrContainer, Path=Width}" 
-                                       FormHeight="{Binding ElementName=bdrContainer, Path=Height}">
-                        
-                </common:UFormContainer>
-                
+            <Border x:Name="bdrContainer" Margin="2">
+                <DockPanel x:Name="pnlContent"/>
             </Border>
         </DockPanel>
     </DockPanel>

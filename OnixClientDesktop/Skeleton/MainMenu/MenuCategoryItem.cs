@@ -1,4 +1,4 @@
-﻿using Its.Onix.Ui.Client.Commons;
+﻿using Its.Onix.Ui.Client.Commons.ViewModels;
 
 namespace Its.Onix.Ui.Client.Skeleton.MainMenu
 {
