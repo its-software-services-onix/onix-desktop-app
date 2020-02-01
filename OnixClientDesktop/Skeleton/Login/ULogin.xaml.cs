@@ -1,13 +1,17 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using Its.Onix.Ui.Client.Commons.Forms;
 
 namespace Its.Onix.Ui.Client.Skeleton.Login
 {
-    public partial class ULogin : UserControl
+    public partial class ULogin : UserControlBase
     {
-        public ULogin()
+        public ULogin(UserControlBase parent) : base (parent)
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NotifyParentToClose();
         }
     }
 }

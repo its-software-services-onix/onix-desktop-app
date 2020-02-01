@@ -25,7 +25,13 @@ namespace Its.Onix.Ui.Client.Skeleton.MainMenu
         private void PopulateProgramMenu()
         {
             MenuCategoryItem programPasswd = new MenuCategoryItem() { Caption = "CHANGE PASSWORD" };
-            MenuCategoryItem programLogOUt = new MenuCategoryItem() { Caption = "LOGOUT" };
+            MenuCategoryItem programLogOUt = new MenuCategoryItem() 
+            { 
+                Caption = "LOGOUT",
+                FormName = "FormLogin",
+                NeedConfirm = true,
+                IsModal = true
+            };
             MenuCategoryItem programExit = new MenuCategoryItem() { Caption = "EXIT" };
 
             var items = new ObservableCollection<MenuCategoryItem>();

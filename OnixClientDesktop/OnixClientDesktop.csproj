@@ -75,8 +75,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commons\Factories\FormFactory.cs" />
     <Compile Include="Commons\Forms\FormBase.cs" />
     <Compile Include="Commons\Forms\IForm.cs" />
+    <Compile Include="Commons\Forms\UserControlBase.cs" />
     <Compile Include="Commons\ViewModels\ObservableScreen.cs" />
     <Compile Include="Commons\ViewModels\ObservableObject.cs" />
     <Compile Include="Commons\Forms\UFormContainer.xaml.cs">

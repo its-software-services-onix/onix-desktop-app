@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Its.Onix.Ui.Client.Commons.Forms
 {
-    public partial class UFormContainer : UserControl
+    public partial class UFormContainer : UserControlBase
     {
         public static readonly DependencyProperty FormWidthProperty =
             DependencyProperty.Register("FormWidth", typeof(double), typeof(UFormContainer),
@@ -86,7 +86,7 @@ namespace Its.Onix.Ui.Client.Commons.Forms
         }
         #endregion Caption
 
-        public UFormContainer()
+        public UFormContainer(UserControlBase parent) : base(parent)
         {
             DataContext = this;
             InitializeComponent();
@@ -102,6 +102,11 @@ namespace Its.Onix.Ui.Client.Commons.Forms
 
                 grdMain.Children.Add(content);
             }
+        }
+
+        protected override void Close()
+        {
+            FormWrapper.Close();
         }
     }
 }

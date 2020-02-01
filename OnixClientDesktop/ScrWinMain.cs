@@ -9,6 +9,7 @@ namespace Its.Onix.Ui.Client
         private string currentUser;
         private string url;
         private string version;
+        private bool isNoPopup = true;
 
         public ScrWinMain()
         {
@@ -68,6 +69,20 @@ namespace Its.Onix.Ui.Client
             {
                 version = value;
                 OnPropertyChanged("Version");
+            }
+        }
+
+        public bool IsNoPopup
+        {
+            get
+            {
+                return isNoPopup;
+            }
+
+            set
+            {
+                isNoPopup = value;
+                OnPropertyChanged("IsNoPopup");
             }
         }
     }
