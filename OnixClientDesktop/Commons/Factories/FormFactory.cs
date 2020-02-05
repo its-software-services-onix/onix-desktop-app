@@ -24,6 +24,7 @@ namespace Its.Onix.Ui.Client.Commons.Factories
         private static void InitClassMap()
         {
             AddItem("FormLogin", "Its.Onix.Ui.Client.Skeleton.Login.FormLogin");
+            AddItem("FormMessageBox", "Its.Onix.Ui.Client.Commons.MessageBox.FormMessageBox");
         }
 
         public static IForm CreateFormObject(DockPanel pnl, string name)

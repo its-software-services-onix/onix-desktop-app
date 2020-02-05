@@ -59,6 +59,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Commons\MessageBox\WindowMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Commons\MessageBox\UFormMessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Skeleton\ChangePassword\UChangePassword.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +87,14 @@
     <Compile Include="Commons\Forms\FormBase.cs" />
     <Compile Include="Commons\Forms\IForm.cs" />
     <Compile Include="Commons\Forms\UserControlBase.cs" />
+    <Compile Include="Commons\MessageBox\FormMessageBox.cs" />
+    <Compile Include="Commons\MessageBox\MessageBox.cs" />
+    <Compile Include="Commons\MessageBox\WindowMessageBox.xaml.cs">
+      <DependentUpon>WindowMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\MessageBox\UFormMessageBox.xaml.cs">
+      <DependentUpon>UFormMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Commons\ViewModels\ObservableScreen.cs" />
     <Compile Include="Commons\ViewModels\ObservableObject.cs" />
     <Compile Include="Commons\Forms\UFormContainer.xaml.cs">

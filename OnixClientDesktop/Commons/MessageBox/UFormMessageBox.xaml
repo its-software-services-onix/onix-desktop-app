@@ -1,4 +1,4 @@
-﻿<commons:UserControlBase x:Class="Its.Onix.Ui.Client.Skeleton.Login.ULogin"
+﻿<commons:UserControlBase x:Class="Its.Onix.Ui.Client.Commons.MessageBox.UFormMessageBox"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,9 +7,9 @@
              xmlns:local="clr-namespace:Its.Onix.Ui.Client.Skeleton.Login"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Background="Wheat" Orientation="Vertical">
-        <Button Width="200" Height="80" Content="CLOSE LOGIN" Click="Button_Click"/>
-        <Button Width="200" Height="80" Content="MESSAGE BOX" Click="Button_Click_1"/>
-        <TextBox Width="200" Height="40"/>
+    <StackPanel Background="Wheat" Orientation="Horizontal" HorizontalAlignment="Center">
+        <Button Width="200" Height="80" Content="YES" Click="Button_Click"/>
+        <Button Width="200" Height="80" Content="NO" Click="Button_Click"/>
+        <Button Width="200" Height="80" Content="OK" Click="Button_Click"/>
     </StackPanel>
 </commons:UserControlBase>

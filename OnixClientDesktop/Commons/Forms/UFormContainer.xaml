@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Its.Onix.Ui.Client.Commons.Forms"
              mc:Ignorable="d" 
              Width="{Binding FormWidth}"
-             Height="{Binding FormHeight}"             
+             Height="{Binding FormHeight}"    
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Background="Snow">

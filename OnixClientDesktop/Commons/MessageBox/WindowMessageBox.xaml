@@ -1,0 +1,15 @@
+﻿<Window x:Class="Its.Onix.Ui.Client.Commons.MessageBox.WindowMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Its.Onix.Ui.Client.Commons.MessageBox"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Title="FormMessageBox" SizeToContent="WidthAndHeight">
+    <DockPanel x:Name="pnlPopup" Width="800" Height="200">
+    </DockPanel>
+</Window>
