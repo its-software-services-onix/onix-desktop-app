@@ -89,7 +89,7 @@
     <Compile Include="Commons\Forms\IForm.cs" />
     <Compile Include="Commons\Forms\UserControlBase.cs" />
     <Compile Include="Commons\MessageBox\FormMessageBox.cs" />
-    <Compile Include="Commons\MessageBox\MessageBox.cs" />
+    <Compile Include="Commons\MessageBox\CMessageBox.cs" />
     <Compile Include="Commons\MessageBox\WindowMessageBox.xaml.cs">
       <DependentUpon>WindowMessageBox.xaml</DependentUpon>
     </Compile>

@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Its.Onix.Ui.Client.Commons.MessageBox
 {
-    public static class MessageBox
+    public static class CMessageBox
     {
         public static MessageBoxResult Show(string text)
         {

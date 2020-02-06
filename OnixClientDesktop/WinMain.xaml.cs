@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Its.Onix.Ui.Client.Commons.Factories;
 using Its.Onix.Ui.Client.Commons.Forms;
+using Its.Onix.Ui.Client.Commons.MessageBox;
 using Its.Onix.Ui.Client.Skeleton.Login;
 using Its.Onix.Ui.Client.Skeleton.MainMenu;
 
@@ -45,6 +46,11 @@ namespace Its.Onix.Ui.Client
         {
             MenuItem mi = sender as MenuItem;
             MenuCategoryItem item = (MenuCategoryItem) mi.DataContext;
+
+            if (item.NeedConfirm)
+            {
+                CMessageBox.Show("");
+            }
 
             DockPanel pnl = pnlSystem;
             if (item.IsModal)
