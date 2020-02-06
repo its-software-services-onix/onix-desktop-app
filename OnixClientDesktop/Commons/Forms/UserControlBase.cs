@@ -12,15 +12,15 @@ namespace Its.Onix.Ui.Client.Commons.Forms
             ParentContainer = parent;
         }
 
-        protected virtual void Close()
+        protected virtual void Close(object param)
         {
         }
 
-        protected void NotifyParentToClose()
+        protected void NotifyParentToClose(object param)
         {
             if (ParentContainer != null)
             {
-                ParentContainer.Close();
+                ParentContainer.Close(param);
             }
         }
     }

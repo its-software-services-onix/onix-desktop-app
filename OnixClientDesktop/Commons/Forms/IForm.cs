@@ -6,7 +6,7 @@ namespace Its.Onix.Ui.Client.Commons.Forms
     public interface IForm
     {
         void Show();
-        void Close();
+        void Close(object param);
         string Caption { get; set; }
     }
 }

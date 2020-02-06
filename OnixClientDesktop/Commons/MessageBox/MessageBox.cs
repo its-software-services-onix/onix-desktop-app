@@ -29,7 +29,9 @@ namespace Its.Onix.Ui.Client.Commons.MessageBox
         {
             WindowMessageBox msg = new WindowMessageBox(txt, title, buttons, imgs);
             msg.ShowDialog();
-            return MessageBoxResult.OK;
+            MessageBoxResult result = msg.Result;
+
+            return result;
         }
     }
 }

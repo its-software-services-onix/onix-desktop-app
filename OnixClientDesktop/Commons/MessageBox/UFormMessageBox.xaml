@@ -8,8 +8,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel Background="Wheat" Orientation="Horizontal" HorizontalAlignment="Center">
-        <Button Width="200" Height="80" Content="YES" Click="Button_Click"/>
-        <Button Width="200" Height="80" Content="NO" Click="Button_Click"/>
-        <Button Width="200" Height="80" Content="OK" Click="Button_Click"/>
+        <Button Width="200" Height="80" Content="YES" Click="ButtonYes_Click"/>
+        <Button Width="200" Height="80" Content="NO" Click="ButtonNo_Click"/>
+        <Button Width="200" Height="80" Content="OK" Click="ButtonOk_Click"/>
     </StackPanel>
 </commons:UserControlBase>

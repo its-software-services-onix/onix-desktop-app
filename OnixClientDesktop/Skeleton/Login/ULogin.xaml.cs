@@ -1,5 +1,5 @@
-﻿using Its.Onix.Ui.Client.Commons.Forms;
-using Its.Onix.Ui.Client.Commons.MessageBox;
+﻿using System.Windows;
+using Its.Onix.Ui.Client.Commons.Forms;
 
 namespace Its.Onix.Ui.Client.Skeleton.Login
 {
@@ -12,12 +12,12 @@ namespace Its.Onix.Ui.Client.Skeleton.Login
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NotifyParentToClose();
+            NotifyParentToClose(null);
         }
 
         private void Button_Click_1(object sender, System.Windows.RoutedEventArgs e)
         {
-            MessageBox.Show("");
+            MessageBoxResult result = Commons.MessageBox.MessageBox.Show("");
         }
     }
 }

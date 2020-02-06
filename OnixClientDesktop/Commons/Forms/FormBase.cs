@@ -56,10 +56,12 @@ namespace Its.Onix.Ui.Client.Commons.Forms
             OnFormLoaded?.Invoke(this, null);
         }
 
-        public void Close()
+        public void Close(object param)
         {
             Panel.Children.Clear();
-            OnFormClosed?.Invoke(this, null);
+            FormClosedEventArgs e = new FormClosedEventArgs();
+            e.ClosedParam = param;
+            OnFormClosed?.Invoke(this, e);
         }        
     }
 }

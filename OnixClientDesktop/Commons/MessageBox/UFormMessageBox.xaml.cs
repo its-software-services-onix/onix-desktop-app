@@ -1,4 +1,5 @@
-﻿using Its.Onix.Ui.Client.Commons.Forms;
+﻿using System.Windows;
+using Its.Onix.Ui.Client.Commons.Forms;
 
 namespace Its.Onix.Ui.Client.Commons.MessageBox
 {
@@ -9,9 +10,19 @@ namespace Its.Onix.Ui.Client.Commons.MessageBox
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonYes_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NotifyParentToClose();
+            NotifyParentToClose(MessageBoxResult.Yes);
+        }
+
+        private void ButtonNo_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NotifyParentToClose(MessageBoxResult.No);
+        }
+
+        private void ButtonOk_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NotifyParentToClose(MessageBoxResult.OK);
         }
     }
 }

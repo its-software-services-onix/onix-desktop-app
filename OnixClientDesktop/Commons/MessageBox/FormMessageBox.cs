@@ -11,9 +11,6 @@ namespace Its.Onix.Ui.Client.Commons.MessageBox
 
         protected override void SetupContainerSize(UFormContainer container)
         {
-            double h = Panel.ActualHeight;
-            double w = Panel.ActualWidth;
-
             container.FormWidth = Panel.ActualWidth;
             container.FormHeight = Panel.ActualHeight;
         }

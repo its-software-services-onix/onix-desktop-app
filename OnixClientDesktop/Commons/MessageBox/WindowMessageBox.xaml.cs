@@ -7,13 +7,22 @@ namespace Its.Onix.Ui.Client.Commons.MessageBox
 {
     public partial class WindowMessageBox : Window
     {
-        private string titleText = "";
+        private readonly string titleText = "";
+        private readonly MessageBoxImage icon;
+        private readonly MessageBoxButton buttons;
+        private readonly string messageText = "";
 
         public WindowMessageBox(string text, string title, MessageBoxButton buttons, MessageBoxImage icon)
         {
             titleText = title;
+            messageText = text;
+            this.icon = icon;
+            this.buttons = buttons;
+
             InitializeComponent();
         }
+
+        public MessageBoxResult Result { get; set; }
 
         public WindowMessageBox()
         {
@@ -26,6 +35,7 @@ namespace Its.Onix.Ui.Client.Commons.MessageBox
 
         private void PopupFormClosed(object sender, EventArgs e)
         {
+            Result = (MessageBoxResult) (e as FormClosedEventArgs).ClosedParam;
             this.Close();
         }
 

@@ -11,7 +11,6 @@ namespace Its.Onix.Ui.Client
     public partial class WinMain : Window
     {
         private readonly ScrWinMain screen = new ScrWinMain();
-        private FormLogin frmLogin;
 
         public WinMain()
         {

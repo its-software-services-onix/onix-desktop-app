@@ -104,9 +104,9 @@ namespace Its.Onix.Ui.Client.Commons.Forms
             }
         }
 
-        protected override void Close()
+        protected override void Close(object param)
         {
-            FormWrapper.Close();
+            FormWrapper.Close(param);
         }
     }
 }
