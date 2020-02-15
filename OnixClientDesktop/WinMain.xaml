@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:loc="clr-namespace:Its.Onix.Ui.Client.Commons.Localization"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
@@ -45,7 +46,7 @@
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" Content="USER" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="0" loc:LocalizationProvider.ContentID="CurrentUser" Style="{StaticResource ResourceKey=StatusLabel}"/>
             <Label Grid.Column="1" Content="{Binding CurrentUser}" Style="{StaticResource ResourceKey=StatusLabel}"/>
 
             <Label Grid.Column="2" Content="URL" Style="{StaticResource ResourceKey=StatusLabel}"/>
