@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using Its.Onix.Ui.Client.Commons.Factories;
 using Its.Onix.Ui.Client.Commons.Forms;
 using Its.Onix.Ui.Client.Commons.MessageBox;
-using Its.Onix.Ui.Client.Skeleton.Login;
+using Its.Onix.Ui.Client.Commons.Localization;
 using Its.Onix.Ui.Client.Skeleton.MainMenu;
 
 namespace Its.Onix.Ui.Client
@@ -40,6 +40,7 @@ namespace Its.Onix.Ui.Client
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            LocalizationProvider.SetCurrentLocale("TH");
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

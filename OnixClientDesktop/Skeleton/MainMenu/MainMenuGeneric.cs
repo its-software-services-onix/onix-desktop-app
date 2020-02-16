@@ -9,14 +9,14 @@ namespace Its.Onix.Ui.Client.Skeleton.MainMenu
 
         private void PopulateGenericMenu()
         {
-            MenuCategoryItem genericCustomer = new MenuCategoryItem() { Caption = "CUSTOMERS" };
-            MenuCategoryItem genericSupplier = new MenuCategoryItem() { Caption = "SUPPLIERS" };
+            MenuCategoryItem genericCustomer = new MenuCategoryItem() { Caption = "MenuCustomer" };
+            MenuCategoryItem genericSupplier = new MenuCategoryItem() { Caption = "MenuSupplier" };
 
             var items = new ObservableCollection<MenuCategoryItem>();
             items.Add(genericCustomer);
             items.Add(genericSupplier);
 
-            MenuCategory genericMenu = new MenuCategory() { Caption = "GENERIC" };
+            MenuCategory genericMenu = new MenuCategory() { Caption = "MenuGeneric" };
             genericMenu.ChildItems = items;
 
             categories.Add(genericMenu);
@@ -24,22 +24,22 @@ namespace Its.Onix.Ui.Client.Skeleton.MainMenu
 
         private void PopulateProgramMenu()
         {
-            MenuCategoryItem programPasswd = new MenuCategoryItem() { Caption = "CHANGE PASSWORD" };
+            MenuCategoryItem programPasswd = new MenuCategoryItem() { Caption = "MenuChangePassword" };
             MenuCategoryItem programLogOUt = new MenuCategoryItem() 
             { 
-                Caption = "LOGOUT",
+                Caption = "MenuLogout",
                 FormName = "FormLogin",
                 NeedConfirm = true,
                 IsModal = true
             };
-            MenuCategoryItem programExit = new MenuCategoryItem() { Caption = "EXIT" };
+            MenuCategoryItem programExit = new MenuCategoryItem() { Caption = "MenuExit" };
 
             var items = new ObservableCollection<MenuCategoryItem>();
             items.Add(programPasswd);
             items.Add(programLogOUt);
             items.Add(programExit);
 
-            MenuCategory programMenu = new MenuCategory() { Caption = "PROGRAM" } ;
+            MenuCategory programMenu = new MenuCategory() { Caption = "MenuProgram" } ;
             programMenu.ChildItems = items;
 
             categories.Add(programMenu);

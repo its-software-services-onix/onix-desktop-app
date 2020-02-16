@@ -18,11 +18,11 @@
 
             <Menu.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Path=ChildItems}">
-                    <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=TopLevelMenuItem}"></Label>
+                    <Label loc:LocalizationProvider.ContentID="{Binding Caption}" Style="{StaticResource ResourceKey=TopLevelMenuItem}"></Label>
                     <HierarchicalDataTemplate.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical">
-                                <Label Content="{Binding Caption}" Style="{StaticResource ResourceKey=MainMenuItem}"/>
+                                <Label loc:LocalizationProvider.ContentID="{Binding Caption}" Style="{StaticResource ResourceKey=MainMenuItem}"/>
                             </StackPanel>
                         </DataTemplate>
                     </HierarchicalDataTemplate.ItemTemplate>
@@ -49,10 +49,10 @@
             <Label Grid.Column="0" loc:LocalizationProvider.ContentID="CurrentUser" Style="{StaticResource ResourceKey=StatusLabel}"/>
             <Label Grid.Column="1" Content="{Binding CurrentUser}" Style="{StaticResource ResourceKey=StatusLabel}"/>
 
-            <Label Grid.Column="2" Content="URL" Style="{StaticResource ResourceKey=StatusLabel}"/>
+            <Label Grid.Column="2" loc:LocalizationProvider.ContentID="ApiUrl" Style="{StaticResource ResourceKey=StatusLabel}"/>
             <Label Grid.Column="3" Content="{Binding Url}" Style="{StaticResource ResourceKey=StatusLabel}"/>
-            
-            <Label Grid.Column="4" Content="VERSION" Style="{StaticResource ResourceKey=StatusLabel}"/>
+
+            <Label Grid.Column="4" loc:LocalizationProvider.ContentID="Version" Style="{StaticResource ResourceKey=StatusLabel}"/>
             <Label Grid.Column="5" Content="{Binding Version}" Style="{StaticResource ResourceKey=StatusLabel}"/>
         </Grid>
 

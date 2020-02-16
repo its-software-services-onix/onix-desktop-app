@@ -102,6 +102,16 @@
     <Compile Include="Commons\Forms\UFormContainer.xaml.cs">
       <DependentUpon>UFormContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Languages\EN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Languages\TH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TH.resx</DependentUpon>
+    </Compile>
     <Compile Include="Skeleton\ChangePassword\UChangePassword.xaml.cs">
       <DependentUpon>UChangePassword.xaml</DependentUpon>
     </Compile>
@@ -135,6 +145,14 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\EN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\TH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TH.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
